@@ -1254,15 +1254,15 @@ p.nocomments:before {
 }
 .comments .comment-author cite {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
+  margin-top: 0.5em;
   color: #111;
   line-height: 1.333;
   position: relative;
   text-align: left;
   font-size: 1.333em;
-  font-weight: 600;
   color: inherit;
 }
 .comments .comment-author cite small {
@@ -2031,9 +2031,10 @@ h6,
 .beta,
 .gamma,
 .delta {
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
+  margin-top: 0.5em;
   color: #111;
   line-height: 1.333;
   position: relative;
@@ -2101,17 +2102,19 @@ h2,
 h3,
 .gamma {
   font-size: 1.333em;
-  font-weight: 600;
 }
 h4,
 .delta {
   font-size: 1.125em;
-  font-weight: 600;
 }
 h5,
 h6 {
   font-size: 1em;
-  font-weight: 700;
+}
+.article-content h1,
+.article-content h2 {
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #EEE;
 }
 p + h1,
 p + h2,
@@ -2208,7 +2211,7 @@ blockquote p + cite {
 }
 blockquote:before {
   content: "\201C";
-  margin-left: -0.563em;
+  margin-left: 0;
   text-indent: -0.563em;
   float: left;
   font-size: 3.157em;
@@ -2480,9 +2483,10 @@ header.background {
   color: #fff;
 }
 .site-title {
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
+  margin-top: 0.5em;
   color: #111;
   line-height: 1.333;
   position: relative;
@@ -2573,11 +2577,9 @@ article.page + hr {
   padding-left: 2em;
 }
 .article-content h1:before,
-.article-content h2:before {
-  content: "> ";
-}
+.article-content h2:before,
 .article-content h3:before {
-  content: "➤ ";
+  content: "> ";
 }
 article *:before,
 .widget_search *:before {
@@ -2846,9 +2848,10 @@ footer {
     left: auto;
   }
   .site-title {
-    font-weight: 400;
+    font-weight: 500;
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
+    margin-top: 0.5em;
     color: #111;
     line-height: 1.333;
     position: relative;
@@ -3004,9 +3007,10 @@ footer {
 	 */
   .page-title,
   .post-title {
-    font-weight: 400;
+    font-weight: 500;
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
+    margin-top: 0.5em;
     color: #111;
     line-height: 1.333;
     position: relative;

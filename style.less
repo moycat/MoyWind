@@ -80,13 +80,14 @@ body {
  * Typography
  */
 h1, h2, h3, h4, h5, h6, .heading, .omega, .psi, .alpha, .beta, .gamma, .delta {
-	font-weight: 400;
+	font-weight: 500;
 	margin:0;
-	margin-bottom:1rem;
-	color: @color_head;
-	line-height: 1.333;
-	position: relative;
-	text-align: left;
+	margin-bottom:0.6rem;
+	margin-top: 0.5em;
+	color:@color_head;
+	line-height:1.333;
+	position:relative;
+	text-align:left;
 	small {
 		.opacity(0.8);
 	}
@@ -122,17 +123,21 @@ h2, .beta {
 
 h3, .gamma {
 	font-size:1.333em;
-	font-weight: 600;
 }
 
 h4, .delta {
 	font-size:1.125em;
-	font-weight: 600;
 }
 
 h5, h6 {
 	font-size: 1em;
-	font-weight: 700;
+}
+
+.article-content {
+	h1, h2 {
+		padding-bottom: 0.6rem;
+		border-bottom: 1px solid #EEE;
+	}
 }
 
 p + h1, p + h2, p + h3, p + h4 {
@@ -217,7 +222,7 @@ blockquote {
 
 	&:before {
 		content: "\201C";
-		margin-left: -0.563em;
+		margin-left: 0;
 		text-indent: -.563em;
 		float: left;
 		font-size:3.157em;
@@ -518,11 +523,8 @@ article.post, article.page {
 	ul, ol {
 		padding-left:2em;
 	}
-	h1:before, h2:before {
+	h1:before, h2:before, h3:before {
 		content:"> ";
-	}
-	h3:before {
-		content:"➤ ";
 	}
 }
 article *:before, .widget_search *:before {
