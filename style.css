@@ -2495,7 +2495,7 @@ header.background {
   letter-spacing: -1px;
   font-weight: 300;
   margin-bottom: 0;
-  font-family: SimSun;
+  font-family: "Noto Serif", SimSun, serif;
 }
 .site-title small {
   filter: alpha(opacity=@opacity * 100);
@@ -2507,7 +2507,7 @@ header.background {
   text-decoration: none;
 }
 .site-description {
-  font-family: FangSong;
+  font-family: "Noto Serif", FangSong, serif;
   font-size: 0.92em;
   font-weight: 400;
   text-transform: uppercase;
