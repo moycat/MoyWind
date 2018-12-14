@@ -22,7 +22,7 @@
 
 		<?php highwind_entry_bottom(); ?>
 
-	</article><!-- #post-<?php the_ID(); ?> -->
+	</article><hr><!-- #post-<?php the_ID(); ?> -->
 
 <?php endwhile; ?>
 

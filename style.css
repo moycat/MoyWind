@@ -2728,8 +2728,8 @@ img.wp-post-image {
     background-color: #53a1b8;
   }
   .background-contrast .header {
-    margin-left: -3.157em;
-    margin-right: -3.157em;
+    margin-left: 0;
+    margin-right: 0;
     padding-left: 0;
     padding-right: 0;
   }

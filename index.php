@@ -8,7 +8,7 @@
 <?php
 // File Security Check
 if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
-    die ( __( 'You do not have sufficient permissions to access this page!', 'highwind' ) );
+    die ( __( '你没有权限访问此页面', 'highwind' ) );
 }
 ?>
 <?php get_header(); ?>
@@ -31,7 +31,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 
 				<?php highwind_content_header_top(); ?>
 
-				<h1 class="entry-title"><?php _e( 'Nothing Found', 'highwind' ); ?></h1>
+				<h1 class="entry-title"><?php _e( '无可奉告', 'highwind' ); ?></h1>
 
 				<?php highwind_content_header_bottom(); ?>
 
@@ -41,7 +41,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 
 				<?php highwind_content_entry_top(); ?>
 
-				<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'highwind' ); ?></p>
+				<p><?php _e( '没有符合条件的结果。', 'highwind' ); ?></p>
 
 				<?php get_search_form(); ?>
 

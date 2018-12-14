@@ -14,7 +14,7 @@
 
 	<?php if ( post_password_required() ) : ?>
 
-		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'highwind' ); ?></p>
+		<p class="nopassword"><?php _e( '此博文受密码保护，请输入密码以查看评论。', 'highwind' ); ?></p>
 
 	</div><!-- #comments -->
 
@@ -27,7 +27,7 @@
 
 		<h2 class="comments-title">
 			<?php
-				printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'highwind' ),
+				printf( _n( '&ldquo;%2$s&rdquo;已有一条评论', ' &ldquo;%2$s&rdquo;已有%1$s条评论', get_comments_number(), 'highwind' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
 		</h2>
@@ -42,7 +42,7 @@
 		elseif ( ! comments_open() && post_type_supports( get_post_type(), 'comments' ) && ! is_page() ) :
 	?>
 
-	<p class="nocomments"><?php _e( 'Comments are closed.', 'highwind' ); ?></p>
+	<p class="nocomments"><?php _e( '评论已关闭', 'highwind' ); ?></p>
 
 	<?php endif; ?>
 

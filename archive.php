@@ -22,17 +22,17 @@ get_header();
 		<h1 class="archive-title">
 			<?php
 				if ( is_category() ) :
-					printf( __( 'Category Archives: %s', 'highwind' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+					printf( __( '分类目录：%s', 'highwind' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 
 				elseif ( is_tag() ) :
-					printf( __( 'Tag Archives: %s', 'highwind' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+					printf( __( '标签目录：%s', 'highwind' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 
 				elseif ( is_author() ) :
 					/* Queue the first post, that way we know
 					 * what author we're dealing with (if that is the case).
 					*/
 					the_post();
-					printf( __( 'Author Archives: %s', 'highwind' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
+					printf( __( '作者：%s', 'highwind' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
 					/* Since we called the_post() above, we need to
 					 * rewind the loop back to the beginning that way
 					 * we can run the loop properly, in full.
@@ -40,16 +40,16 @@ get_header();
 					rewind_posts();
 
 				elseif ( is_day() ) :
-					printf( __( 'Daily Archives: %s', 'highwind' ), '<span>' . get_the_date() . '</span>' );
+					printf( __( '日期存档：%s', 'highwind' ), '<span>' . get_the_date() . '</span>' );
 
 				elseif ( is_month() ) :
-					printf( __( 'Monthly Archives: %s', 'highwind' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+					printf( __( '月份存档：%s', 'highwind' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 				elseif ( is_year() ) :
-					printf( __( 'Yearly Archives: %s', 'highwind' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+					printf( __( '年度存档：%s', 'highwind' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 				else :
-					_e( 'Archives', 'highwind' );
+					_e( '存档', 'highwind' );
 
 				endif;
 			?>
@@ -87,7 +87,7 @@ get_header();
 
 				<?php highwind_content_header_top(); ?>
 
-				<h1 class="entry-title"><?php _e( 'Nothing Found', 'highwind' ); ?></h1>
+				<h1 class="entry-title"><?php _e( '无可奉告', 'highwind' ); ?></h1>
 
 				<?php highwind_content_header_bottom(); ?>
 
@@ -97,7 +97,7 @@ get_header();
 
 				<?php highwind_content_entry_top(); ?>
 
-				<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'highwind' ); ?></p>
+				<p><?php _e( '没有符合条件的结果。', 'highwind' ); ?></p>
 
 				<?php get_search_form(); ?>
 

@@ -181,7 +181,7 @@ if ( ! function_exists( 'highwind_wp_title' ) ) {
 
 		// Add a page number if necessary:
 		if ( $paged >= 2 || $page >= 2 )
-			$title .= " $sep " . sprintf( __( 'Page %s', 'highwind' ), max( $paged, $page ) );
+			$title .= " $sep " . sprintf( __( '页面 %s', 'highwind' ), max( $paged, $page ) );
 
 		return $title;
 	}

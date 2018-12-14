@@ -15,7 +15,7 @@
 	<?php if ( is_single() ) : ?>
 		<h1 class="post-title" data-text="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
 	<?php else : ?>
-		<h1 class="post-title" data-text="<?php the_title_attribute(); ?>"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'highwind' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<h1 class="post-title" data-text="<?php the_title_attribute(); ?>"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( '到%s的永久链接', 'highwind' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 	<?php endif; ?>
 
 	<?php highwind_content_header_bottom(); ?>
@@ -28,7 +28,7 @@
 
 		highwind_content_entry_top();
 
-		the_content( __( 'Continue Reading...', 'highwind' ) );
+		the_content( __( 'Read more…', 'highwind' ) );
 
 		wp_link_pages();
 

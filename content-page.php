@@ -26,7 +26,7 @@
 
 		the_content();
 
-		wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'highwind' ) . '</span>', 'after' => '</div>' ) );
+		wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( '页面：', 'highwind' ) . '</span>', 'after' => '</div>' ) );
 
 		highwind_content_entry_bottom();
 

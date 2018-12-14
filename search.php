@@ -19,7 +19,7 @@ get_header();
 
 	<header class="page-header">
 
-		<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'highwind' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		<h1 class="page-title"><?php printf( __( '[%s]的搜索结果', 'highwind' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 
 	</header><!-- .page-header -->
 
@@ -35,13 +35,13 @@ get_header();
 
 			<header class="entry-header">
 
-				<h1 class="entry-title"><?php _e( 'Nothing Found', 'highwind' ); ?></h1>
+				<h1 class="entry-title"><?php _e( '无可奉告', 'highwind' ); ?></h1>
 
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
 
-				<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'highwind' ); ?></p>
+				<p><?php _e( '没有符合条件的搜索结果。', 'highwind' ); ?></p>
 
 				<?php get_search_form(); ?>
 

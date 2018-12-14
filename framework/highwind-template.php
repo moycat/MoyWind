@@ -17,7 +17,7 @@ if ( ! function_exists( 'highwind_navigation_toggle' ) ) {
 		?>
 		<p class="toggle-container">
 			<a href="#navigation" class="nav-toggle button">
-				<?php _e( 'Skip to navigation', 'highwind' ); ?>
+				<?php _e( '转至导航', 'highwind' ); ?>
 			</a>
 		</p>
 		<?php
@@ -66,8 +66,8 @@ if ( ! function_exists( 'highwind_main_navigation' ) ) {
 			<?php do_action( 'highwind_navigation_top' ); ?>
 
 			<ul class="buttons">
-				<li class="home"><a href="<?php echo home_url(); ?>" class="nav-home button"><span><?php _e( 'Home', 'highwind' ); ?></span></a></li>
-				<li class="close"><a href="#top" class="nav-close button"><span><?php _e( 'Return to Content', 'highwind' ); ?></span></a></li>
+				<li class="home"><a href="<?php echo home_url(); ?>" class="nav-home button"><span><?php _e( '首页', 'highwind' ); ?></span></a></li>
+				<li class="close"><a href="#top" class="nav-close button"><span><?php _e( '返回正文', 'highwind' ); ?></span></a></li>
 			</ul>
 			<hr />
 			<h2><?php echo highwind_get_menu_name( 'main' ); ?></h2>
@@ -122,7 +122,7 @@ if ( ! function_exists( 'highwind_post_meta' ) ) {
 		<aside class="post-meta">
 			<ul>
 				<li class="categories"><?php the_category( ', ' ); ?></li>
-				<li class="comment"><?php comments_popup_link( __( '0 Comments', 'highwind' ), __( '1 Comment', 'highwind' ), __( '% Comments', 'highwind' ) ); ?></li>
+				<li class="comment"><?php comments_popup_link( __( '暂无评论', 'highwind' ), __( '一条评论', 'highwind' ), __( '% 条评论', 'highwind' ) ); ?></li>
 				<?php the_tags( '<li class="tags">', ', ','</li>' ); ?>
 				<?php if ( apply_filters( 'highwind_meta_author', true ) ) { ?>
 					<li class="author"><?php if ( apply_filters( 'highwind_meta_author_link', true ) ) { the_author_posts_link(); } else { the_author(); } ?></li>
@@ -144,7 +144,7 @@ if ( ! function_exists( 'highwind_post_date' ) ) {
 	function highwind_post_date() {
 		if ( ! is_page() && ! is_404() ) {
 		?>
-			<time class="post-date"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'highwind' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_time( get_option( 'date_format' ) ); ?></a></time>
+			<time class="post-date"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( '%s的永久链接', 'highwind' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_time( get_option( 'date_format' ) ); ?></a></time>
 		<?php
 		}
 	}
@@ -159,9 +159,9 @@ if ( ! function_exists( 'highwind_comment_navigation' ) ) {
 	function highwind_comment_navigation() {
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { // are there comments to navigate through ?>
 			<nav class="navigation navigation-comments">
-				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'highwind' ); ?></h1>
-				<div class="nav-previous"><?php previous_comments_link( __( 'Older Comments', 'highwind' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'highwind' ) ); ?></div>
+				<h1 class="screen-reader-text"><?php _e( '评论导航', 'highwind' ); ?></h1>
+				<div class="nav-previous"><?php previous_comments_link( __( '更早的评论', 'highwind' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( '更新的评论', 'highwind' ) ); ?></div>
 			</nav>
 		<?php } // check for comment navigation
 	}
@@ -194,7 +194,7 @@ if ( ! function_exists( 'highwind_content_nav' ) ) {
 
 		?>
 		<nav role="navigation" class="<?php echo $nav_class; ?>">
-			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'highwind' ); ?></h1>
+			<h1 class="screen-reader-text"><?php _e( '文章导航', 'highwind' ); ?></h1>
 
 		<?php if ( is_single() ) : // navigation links for single posts ?>
 
@@ -204,11 +204,11 @@ if ( ! function_exists( 'highwind_content_nav' ) ) {
 		<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'highwind' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '更旧', 'highwind' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'highwind' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( '更新', 'highwind' ) ); ?></div>
 			<?php endif; ?>
 
 		<?php endif; ?>
@@ -244,14 +244,14 @@ if ( ! function_exists( 'highwind_comment' ) ) {
 
 				<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>" class="date-link"><?php
 						/* translators: 1: date, 2: time */
-						printf( __( '%1$s at %2$s', 'highwind' ), get_comment_date(), get_comment_time()) ?></a><?php edit_comment_link(__( 'Edit', 'highwind' ),'  ','' );
+						printf( __( '%1$s 于 %2$s', 'highwind' ), get_comment_date(), get_comment_time()) ?></a><?php edit_comment_link(__( '编辑', 'highwind' ),'  ','' );
 					?>
 				</div>
 				<?php printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link() ) ?>
 			</div>
 			<div class="comment-content">
 				<?php if ($comment->comment_approved == '0') { ?>
-					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'highwind' ) ?></em>
+					<em class="comment-awaiting-moderation"><?php _e( '你的评论有待审核', 'highwind' ) ?></em>
 					<br />
 				<?php } ?>
 
@@ -341,6 +341,10 @@ function highwind_credit() {
 	<p>
 		<?php _e( 'Powered by', 'highwind' ); ?> <a href="http://wordpress.org" title="WordPress.org">WordPress</a> &amp; <a href="http://jameskoster.co.uk/highwind/" title="<?php _e( 'Highwind - Customisable and extendable WordPress theme', 'highwind' ); ?>">Highwind</a>.
 	</p>
+	</br>
+	<p>
+		Modified by <a href="https://github.com/moycat" title="Moycat @ Github">Moycat</a>.
+	</p>
 	<?php
 }
 
@@ -353,7 +357,7 @@ function highwind_credit() {
 function highwind_back_to_top() {
 	?>
 		<a href="#top" class="back-to-top button">
-			<?php apply_filters( 'highwind_back_to_top_text', _e( 'Back to top', 'highwind' ) ); ?>
+			<?php apply_filters( 'highwind_back_to_top_text', _e( '返回顶部', 'highwind' ) ); ?>
 		</a>
 	<?php
 }

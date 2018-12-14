@@ -21,7 +21,7 @@ get_header();
 
 		<?php highwind_content_header_top(); ?>
 
-		<h1 class="page-title" data-text="<?php the_title(); ?>"><?php _e( '404 not found', 'highwind' ); ?></h1>
+		<h1 class="page-title" data-text="<?php the_title(); ?>"><?php _e( '404 not Found', 'highwind' ); ?></h1>
 
 		<?php highwind_content_header_bottom(); ?>
 
@@ -31,21 +31,24 @@ get_header();
 
 		<?php highwind_content_entry_top(); ?>
 
-		<p><?php _e( 'It seems the page you\'re looking for no longer (or indeed never did) exists at this location. Please try searching...', 'highwind' ); ?>
+		<p><?php _e( '请尝试搜索：', 'highwind' ); ?>
 
 		<?php
 
 			// Display a search form and some helpful widgets
 
-			$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives.', 'highwind' ) ) . '</p>';
+			$archive_content = '<p>' . sprintf( __( '请尝试搜索：', 'highwind' ) ) . '</p>';
 
-			get_search_form();
-
-			the_widget( 'WP_Widget_Recent_Posts' );
-
-			the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-			the_widget( 'WP_Widget_Tag_Cloud' );
+			get_search_form();?>
+<blockquote>
+<p>Out, out, brief candle!</p>
+<p>Life's but a walking shadow; a poor player,</p>
+<p>That struts and frets his hour upon the stage,</p>
+<p>And then is heard no more: it is a tale</p>
+<p>Told by an idiot, full of sound and fury,</p>
+<p>Signifying nothing.</p>
+</blockquote>
+			<?php
 		?>
 
 		<?php highwind_content_entry_bottom(); ?>
