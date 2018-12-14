@@ -1,10 +1,10 @@
 /*
-Theme Name: Highwind
-Theme URI: http://jameskoster.co.uk/highwind/
-Description: Highwind is a lightweight, free WordPress theme designed to showcase content. It features a clean, responsive design with a strong focus on typography, plus a bunch of presentational options and widgetised regions allowing you to give your site a unique touch. <a href="https://github.com/jameskoster/highwind/wiki">View Documentation</a>.
-Author: jameskoster
+Theme Name: MoyWind
+Theme URI: https://github.com/moycat/MoyWind/
+Description: Fork from Highwind.
+Author: Moycat / jameskoster
 Author URI: http://jameskoster.co.uk
-Version: 1.2.7
+Version: 2.0.0
 Tags: white, two-columns, left-sidebar, right-sidebar, sticky-post, threaded-comments, translation-ready, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, theme-options, light
 
 License: GNU General Public License v2 or later
@@ -14,6 +14,9 @@ Modular Scale: http://modularscale.com/scale/?px1=16&px2=18&ra1=1.333&ra2=0
 
 Highwind WordPress Theme, Copyright 2013 jameskoster.co.uk
 Highwind is distributed under the terms of the GNU GPL
+
+MoyWind WordPres Theme, Copyright 2018 moy.cat
+MoyWind is distributed under the terms of the GNU GPL
 */
 /**
  * STYLE.LESS
@@ -1984,7 +1987,7 @@ html {
 }
 body {
   line-height: 1.777;
-  color: #666A76;
+  color: #333333;
   background: #f8f8f9;
   font-size: 1em;
 }
@@ -2268,7 +2271,7 @@ input.input-text,
 textarea {
   padding: 0.844em;
   background: rgba(0, 0, 0, 0.05);
-  color: #666A76;
+  color: #333333;
   border: 0;
   -webkit-border-radius: 0.201em;
   border-radius: 0.201em;
@@ -2292,8 +2295,8 @@ input[type="radio"] {
   /* Firefox, other Gecko */
   /* Opera/IE 8+ */
   font-size: 0.844em;
-  border: 0.422em solid #666A76;
-  background: #666A76;
+  border: 0.422em solid #333333;
+  background: #333333;
   cursor: pointer;
   position: relative;
   -webkit-border-radius: 100%;
@@ -2323,7 +2326,7 @@ input[type="checkbox"] {
   position: relative;
   -webkit-border-radius: 0.201em;
   border-radius: 0.201em;
-  background-color: #666A76;
+  background-color: #333333;
   margin-right: 1em;
   font-size: 0.844em;
 }
@@ -2395,7 +2398,7 @@ input[type="button"]:active,
 hr {
   height: 1px;
   border: 0;
-  background: #666A76;
+  background: #333333;
   filter: alpha(opacity=@opacity * 100);
   -moz-opacity: 0.2;
   -khtml-opacity: 0.2;
