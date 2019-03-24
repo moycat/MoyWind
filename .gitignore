@@ -1,3 +1,4 @@
 config.codekit
 config.codekit.json
 .DS_Store
+.idea
