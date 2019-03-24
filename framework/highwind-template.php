@@ -121,9 +121,9 @@ if ( ! function_exists( 'highwind_post_meta' ) ) {
 		?>
 		<aside class="post-meta">
 			<ul>
-				<li class="categories"><?php the_category( ', ' ); ?></li>
+				<li class="categories"><?php the_category( '、' ); ?></li>
 				<li class="comment"><?php comments_popup_link( __( '暂无评论', 'highwind' ), __( '一条评论', 'highwind' ), __( '% 条评论', 'highwind' ) ); ?></li>
-				<?php the_tags( '<li class="tags">', ', ','</li>' ); ?>
+				<?php the_tags( '<li class="tags">', '、','</li>' ); ?>
 				<?php if ( apply_filters( 'highwind_meta_author', true ) ) { ?>
 					<li class="author"><?php if ( apply_filters( 'highwind_meta_author_link', true ) ) { the_author_posts_link(); } else { the_author(); } ?></li>
 				<?php } // endif ?>
@@ -345,6 +345,8 @@ function highwind_credit() {
 	<p>
 		Modified by <a href="https://github.com/moycat" title="Moycat @ Github">Moycat</a>.
 	</p>
+	</br>
+	<p>末影随想 © 2012 - <?php echo date("Y"); ?></p>
 	<?php
 }
 
