@@ -343,7 +343,7 @@ function highwind_credit() {
 	</p>
 	</br>
 	<p>
-		Modified by <a href="https://github.com/moycat" title="Moycat @ Github">Moycat</a>.
+		Customized by <a href="https://github.com/moycat" title="Moycat's Github Profile">Moycat</a>.
 	</p>
 	</br>
 	<p>末影随想 © 2012 - <?php echo date("Y"); ?></p>

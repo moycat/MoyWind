@@ -31,15 +31,6 @@ get_header();
 
 		<?php highwind_content_entry_top(); ?>
 
-		<p><?php _e( '请尝试搜索：', 'highwind' ); ?>
-
-		<?php
-
-			// Display a search form and some helpful widgets
-
-			$archive_content = '<p>' . sprintf( __( '请尝试搜索：', 'highwind' ) ) . '</p>';
-
-			get_search_form();?>
 <blockquote>
 <p>Out, out, brief candle!</p>
 <p>Life's but a walking shadow; a poor player,</p>

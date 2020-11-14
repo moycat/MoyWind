@@ -99,4 +99,35 @@ jQuery(document).ready(function($){
     });
 
 });
+    function showNav() {
+        document.getElementById("navigation").style.top = null;
+    }
+    function hideNav() {
+        document.getElementById("navigation").style.top = "-4em";
+    }
+    let prevScrollPos = window.pageYOffset,
+        prevScrollCnt = 5,
+        prevScrollWay = 'up';
+    window.addEventListener('scroll', function() {
+        let currentScrollPos = window.pageYOffset;
+        if (currentScrollPos <= 72) {
+            showNav();
+            return;
+        }
+        let currentScrollWay = (prevScrollPos > currentScrollPos) ? "up" : "down";
+        prevScrollPos = currentScrollPos;
+        if (currentScrollWay !== prevScrollWay) {
+            prevScrollCnt = 0;
+            prevScrollWay = currentScrollWay;
+        }
+        if (prevScrollCnt++ < 40) {
+            return;
+        }
+        if (currentScrollWay === "up") {
+            showNav();
+        } else {
+            hideNav();
+        }
+        prevScrollCnt = 0;
+    });
 }(jQuery));
