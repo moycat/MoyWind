@@ -76,22 +76,7 @@ get_header();
 
 			</div><!-- .attachment -->
 
-			<?php highwind_content_entry_bottom(); ?>
-
 		</section><!--/.article-content-->
-
-		<aside class="post-meta">
-
-			<nav class="gallery-nav">
-
-				<?php next_image_link(); ?>
-
-				<?php previous_image_link(); ?>
-
-			</nav>
-
-		</aside>
-
 
 	</article><!--/.row-->
 
