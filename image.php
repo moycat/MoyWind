@@ -59,7 +59,7 @@ get_header();
 						$next_attachment_url = wp_get_attachment_url();
 					}
 				?>
-				<a href="<?php echo esc_url( $next_attachment_url ); ?>" title="<?php the_title_attribute(); ?>" rel="attachment"><?php
+				<a href="<?php echo wp_get_original_image_url( $post->ID ); ?>" target="_blank" title="<?php the_title_attribute(); ?>" rel="attachment"><?php
 				$attachment_size = apply_filters( 'highwind_attachment_size', 848 );
 				echo wp_get_attachment_image( $post->ID, array( $attachment_size, 1024 ) ); // filterable image width with 1024px limit for image height.
 				?></a>
